@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Titulo from '../components/Titulo.astro';
+import Card from '../components/Card.astro';
+import Json from '../components/Json.astro';
+import { fade } from 'astro:transitions';
+---
+
+<Layout title="Bienvenidos a Astro.">
+		<Titulo/>
+		<Card nombre='Remy' ocupacion='Ing. Software', avatar={true} />
+		<Card nombre='Meki', avatar={false} />
+		<Json/>
+</Layout>

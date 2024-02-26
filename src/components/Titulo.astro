@@ -1,0 +1,34 @@
+---
+const titulo = "Mi primer componente"
+const felinosArray = ["Gatos", "Tigre", "Puma", "Leopardo"]
+const estil = "estilo-de-listado-de-items";
+---
+
+<h1>{titulo}</h1>
+<ul>
+    {felinosArray.map((items) => <li class={estil}>{items}</li>)}
+</ul>
+
+<ul>
+    
+        {
+            felinosArray.map((items =>
+            <>
+                <li class={estil}> {items} </li>
+            </>))
+        }
+    
+</ul>
+
+<style>
+
+    h1{
+        color: brown;
+    }
+
+    .estilo-de-listado-de-items{
+        color: blue;
+        list-style-type: disc;
+        font-weight: bold;
+    }
+</style>
